@@ -708,7 +708,10 @@ KZT
 </html>`;
 
 describe('jsonToHtml()', () => {
-  it('should generate html', () => {
-    expect(jsonToHtml(JSON.stringify(data))).toEqual(html)
+  it('should generate html', (done) => {
+    jsonToHtml(JSON.stringify(data), (err, result) => {
+      expect(result).toEqual(html)
+      done()
+    })
   });
 });
