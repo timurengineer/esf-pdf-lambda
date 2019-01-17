@@ -1,0 +1,27 @@
+{
+  "name": "esf-pdf-lambda",
+  "version": "1.0.0",
+  "description": "AWS lambda for JSON to PDF conversion",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "memorystream": "^0.3.1",
+    "wkhtmltopdf": "^0.3.4"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timurengineer/esf-pdf-lambda.git"
+  },
+  "author": "Timur Z",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timurengineer/esf-pdf-lambda/issues"
+  },
+  "homepage": "https://github.com/timurengineer/esf-pdf-lambda#readme"
+}
