@@ -1,0 +1,18 @@
+# For full config options, check the docs:
+#    docs.serverless.com
+
+service: esf
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-west-1
+
+functions:
+  json-pdf:
+    handler: index.handler
+    events:
+      - http:
+          path: pdfs/create
+          method: post
+
