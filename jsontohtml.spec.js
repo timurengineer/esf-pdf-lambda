@@ -59,24 +59,26 @@ const data = {
       exerciseWay: 'fjdsal'
     },
     productSet: {
-      product: [
-        {
-          description: 'myaso',
-          unitCode: '',
-          unitNomenclature: '',
-          quantity: '',
-          unitPrice: '',
-          priceWithoutTax: '',
-          exciseRate: '',
-          exciseAmount: '',
-          turnoverSize: '',
-          ndsRate: '',
-          ndsAmount: '',
-          priceWithTax: '',
-          applicationNumberInCustomsUnion: '',
-          additional: ''
-        }
-      ],
+      products: {
+        product: [
+          {
+            description: 'myaso',
+            unitCode: '',
+            unitNomenclature: '',
+            quantity: '',
+            unitPrice: '',
+            priceWithoutTax: '',
+            exciseRate: '',
+            exciseAmount: '',
+            turnoverSize: '',
+            ndsRate: '',
+            ndsAmount: '',
+            priceWithTax: '',
+            applicationNumberInCustomsUnion: '',
+            additional: ''
+          }
+        ],
+      },
       totalPriceWithoutTax: '4234',
       totalExciseAmount: '432',
       totalTurnoverSize: '4342',
