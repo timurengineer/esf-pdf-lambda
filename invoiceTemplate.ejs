@@ -530,8 +530,8 @@
               <td style="width:50%;">
                 <b>23.</b><span class="field-name">Грузополучатель</span><br>
                 <b>23.1</b><span class="field-name">ИИН/БИН</span><span class="field-value"><%=invoice.consignee ? invoice.consignee.tin : ''%></span><br>
-                <b>23.2</b><span class="field-name">Наименование</span><span class="field-value"><%=invoice.consignee ? invoice.consignee.name || ''%></span><br>
-                <b>23.3</b><span class="field-name">Адрес доставки</span><span class="field-value"><%=invoice.consignee ? invoice.consignee.address || ''%></span><br>
+                <b>23.2</b><span class="field-name">Наименование</span><span class="field-value"><%=invoice.consignee ? invoice.consignee.name : ''%></span><br>
+                <b>23.3</b><span class="field-name">Адрес доставки</span><span class="field-value"><%=invoice.consignee ? invoice.consignee.address : ''%></span><br>
               </td>
             </tr>
           </tbody>
