@@ -634,7 +634,7 @@
                 <td class="num-cell">14</td>
                 <td class="num-cell">15</td>
             </tr>
-            <% invoice.productSet.product.forEach(function(item, index) { %>
+            <% invoice.productSet.products.product.forEach(function(item, index) { %>
               <tr class="service_grid">
                 <td class="first" value="<%=index + 1%>"><%=index + 1%></td>
                 <td class="long" style="width: 200px;"><span><%=item.description || ''%></span></td>
