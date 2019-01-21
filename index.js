@@ -12,6 +12,9 @@ exports.handler = (event, context, callback) => {
     wkhtmltopdf(html, options, () => {
       const result = {
         statusCode: 200,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
         body: JSON.stringify({
           pdfBase64: memStream.read().toString('base64')
         })
