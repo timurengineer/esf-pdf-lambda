@@ -10,7 +10,7 @@ exports.handler = (event, context, callback) => {
   
   jsonToHtml(event.body, (err, html) => {
     console.log('Event arg, ', event)
-    console.log('Event.body, ', event)
+    console.log('Event.body, ', event.body)
 
     wkhtmltopdf(html, options, () => {
       const result = {
