@@ -9,6 +9,7 @@ exports.handler = (event, context, callback) => {
   const options = {};
   
   jsonToHtml(event.body, (err, html) => {
+    console.log(event)
     wkhtmltopdf(html, options, () => {
       const result = {
         statusCode: 200,
