@@ -2,4 +2,4 @@
 
 # esf-pdf-lambda
 
-AWS lambda for JSON to PDF conversion
+AWS lambda for JSON to PDF conversion. Used by Web Client: https://github.com/timurengineer/esf-web-client
