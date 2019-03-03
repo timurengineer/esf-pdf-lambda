@@ -1,18 +1,14 @@
-const wkhtmltopdf = require('wkhtmltopdf');
-const MemoryStream = require('memorystream');
-const jsonToHtml = require('./jsontohtml');
+const wkhtmltopdf = require('wkhtmltopdf')
+const MemoryStream = require('memorystream')
+const jsonToHtml = require('./jsontohtml')
 
-process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'];
+process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT']
 
 exports.handler = (event, context, callback) => {
-  const memStream = new MemoryStream();
-  const options = {};
-  
-  jsonToHtml(event.body, (err, html) => {
-    console.log('Event arg, ', event)
-    console.log('Event.body, ', event.body)
+  const memStream = new MemoryStream()
 
-    wkhtmltopdf(html, options, () => {
+  jsonToHtml(event.body, (err, html) => {
+    wkhtmltopdf(html, {}, () => {
       const result = {
         statusCode: 200,
         headers: {
@@ -21,13 +17,11 @@ exports.handler = (event, context, callback) => {
           'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          pdfBase64: memStream.read().toString('base64')
-        })
-      };
-  
-      callback(null, result);
+        body: JSON.stringify({ pdfBase64: memStream.read().toString('base64') })
+      }
+
+      callback(null, result)
     })
-      .pipe(memStream);	
-  });
-};
+      .pipe(memStream)	
+  })
+}
